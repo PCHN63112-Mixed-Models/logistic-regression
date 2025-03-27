@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Installing R and RStudio &#8212; GLM I: Logistic Regression</title>
+    <title>Modelling Binary Outcome Variables &#8212; GLM I: Logistic Regression</title>
   
   
   
@@ -60,7 +60,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = '2.modelling-binary';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="What is R?" href="1.what-is-logistic-reg.html" />
+    <link rel="prev" title="What is Logistic Regression?" href="1.what-is-logistic-reg.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -179,8 +179,8 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="1.what-is-logistic-reg.html">What is R?</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Installing R and RStudio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1.what-is-logistic-reg.html">What is Logistic Regression?</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Modelling Binary Outcome Variables</a></li>
 </ul>
 
     </div>
@@ -366,7 +366,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Installing R and RStudio</h1>
+    <h1>Modelling Binary Outcome Variables</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -376,11 +376,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cran">CRAN</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-r">Installing R</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-rstudio">Installing RStudio</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rstudio-interface-tour">RStudio Interface Tour</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#keeping-r-up-to-date">Keeping R Up-to-date</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cdf-transformations">CDF Transformations</a></li>
 </ul>
             </nav>
         </div>
@@ -392,64 +388,10 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="installing-r-and-rstudio">
-<h1>Installing R and RStudio<a class="headerlink" href="#installing-r-and-rstudio" title="Link to this heading">#</a></h1>
-<p>In this section, we will see how to install the basic <code class="docutils literal notranslate"><span class="pre">R</span></code> interface, as well as the more useful interface provided by <code class="docutils literal notranslate"><span class="pre">RStudio</span></code>. If you already have <code class="docutils literal notranslate"><span class="pre">R</span></code> and <code class="docutils literal notranslate"><span class="pre">RStudio</span></code> installed, feel free to skip this section and more on to exploring the <code class="docutils literal notranslate"><span class="pre">R</span></code> language.</p>
-<section id="cran">
-<h2>CRAN<a class="headerlink" href="#cran" title="Link to this heading">#</a></h2>
-</section>
-<section id="installing-r">
-<h2>Installing R<a class="headerlink" href="#installing-r" title="Link to this heading">#</a></h2>
-<p>The first thing we need to do is install the <code class="docutils literal notranslate"><span class="pre">R</span></code> language. Select your operating system below in order to see a video guide on how to install <code class="docutils literal notranslate"><span class="pre">R</span></code>.</p>
-<div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-0">
-Windows</label><div class="sd-tab-content docutils">
-<p>The video below will walk you through the process of installing <code class="docutils literal notranslate"><span class="pre">R</span></code> on Windows 11.</p>
-</div>
-<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-1">
-macOS</label><div class="sd-tab-content docutils">
-<p>The video below will walk you through the process of installing <code class="docutils literal notranslate"><span class="pre">R</span></code> on macOS.</p>
-</div>
-<input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-2">
-Ubuntu</label><div class="sd-tab-content docutils">
-<p>The video below will walk you through the process of installing <code class="docutils literal notranslate"><span class="pre">R</span></code> on Ubuntu. Other Linux distros will be a similar process.</p>
-</div>
-</div>
-</section>
-<section id="installing-rstudio">
-<h2>Installing RStudio<a class="headerlink" href="#installing-rstudio" title="Link to this heading">#</a></h2>
-<p>Although the default R interface is perfectly useable, it is very bare-bones. Because of this, alternative interfaces for <code class="docutils literal notranslate"><span class="pre">R</span></code> have been developed. The most popular, and the one we will be using primarily on this course, is <a class="reference external" href="https://posit.co/download/rstudio-desktop/">RStudio</a>.</p>
-<div class="sd-tab-set docutils">
-<input checked="checked" id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-3">
-Windows</label><div class="sd-tab-content docutils">
-<p>The video below will walk you through the process of installing <code class="docutils literal notranslate"><span class="pre">RStudio</span></code> on Windows 11.</p>
-</div>
-<input id="sd-tab-item-4" name="sd-tab-set-1" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-4">
-macOS</label><div class="sd-tab-content docutils">
-<p>The video below will walk you through the process of installing <code class="docutils literal notranslate"><span class="pre">RStudio</span></code> on macOS.</p>
-</div>
-<input id="sd-tab-item-5" name="sd-tab-set-1" type="radio">
-<label class="sd-tab-label" for="sd-tab-item-5">
-Ubuntu</label><div class="sd-tab-content docutils">
-<p>The video below will walk you through the process of installing <code class="docutils literal notranslate"><span class="pre">RStudio</span></code> on Ubuntu. Other Linux distros will be a similar process.</p>
-</div>
-</div>
-<div class="tip admonition">
-<p class="admonition-title">What is an IDE?</p>
-<p><code class="docutils literal notranslate"><span class="pre">RStudio</span></code> is an example of an <em>integrated developer environment</em> or IDE. …</p>
-</div>
-</section>
-<section id="rstudio-interface-tour">
-<h2>RStudio Interface Tour<a class="headerlink" href="#rstudio-interface-tour" title="Link to this heading">#</a></h2>
-<p>The video below will give you a brief tour of the <code class="docutils literal notranslate"><span class="pre">RStudio</span></code> interface, getting you familiar with all the key elements we will be using as the course progresses.</p>
-</section>
-<section id="keeping-r-up-to-date">
-<h2>Keeping R Up-to-date<a class="headerlink" href="#keeping-r-up-to-date" title="Link to this heading">#</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="modelling-binary-outcome-variables">
+<h1>Modelling Binary Outcome Variables<a class="headerlink" href="#modelling-binary-outcome-variables" title="Link to this heading">#</a></h1>
+<section id="cdf-transformations">
+<h2>CDF Transformations<a class="headerlink" href="#cdf-transformations" title="Link to this heading">#</a></h2>
 </section>
 </section>
 
@@ -489,7 +431,7 @@ Ubuntu</label><div class="sd-tab-content docutils">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">What is R?</p>
+        <p class="prev-next-title">What is Logistic Regression?</p>
       </div>
     </a>
 </div>
@@ -508,11 +450,7 @@ Ubuntu</label><div class="sd-tab-content docutils">
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cran">CRAN</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-r">Installing R</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-rstudio">Installing RStudio</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rstudio-interface-tour">RStudio Interface Tour</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#keeping-r-up-to-date">Keeping R Up-to-date</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cdf-transformations">CDF Transformations</a></li>
 </ul>
   </nav></div>
 
